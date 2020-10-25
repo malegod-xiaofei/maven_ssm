@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!-- namespace : 用于绑定Dao接口,使用类全名 -->
+<!-- 是用于调用的映射,只是一个名字而已 调用方式 : namespace.id 这里和别名没有关系 -->
+<mapper namespace="com.tledu.zyf.dao.IBranchDao">
+	<!-- id : 表示调用的sql的名字,相当于 方法名 -->
+	<!-- parameterType : 入参数类型,建议使用类全名 -->
+	<!-- resultType : 返回值类型,MyBatis会根据sql语句执行结果自己创建对象 如果返回多个 User 会自己放在 List中 -->
+	<!-- #{username} : 就等于使用 ? 这种方式 -->
+
+	<select id="list" resultType="Branch">
+		select * from t_branch
+	</select>
+
+
+</mapper>
